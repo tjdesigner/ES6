@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
+
+	body{
+		background: #8bc34a;
+	}
+
+	h1.asdf {
+    color: #999999;
+    margin: auto;
+    width: 1024px;
+    text-align: center;
+    padding: 20px;
+    border: solid 1px #ececec;
+    background: #f9f9f9;
+}
+
+p#demo {
+    margin: 0 auto;
+    width: 1024px;
+    background: rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 3px;
+    border: solid 1px rgba(0,0,0,0.1);
+}
+
+.imgAnimal {
+    border-radius: 4px;
+    padding: 9px 9px 5px 9px;
+    display: inline-block;
+}
+
+.description {
+    padding: 10px;
+}
+
+.nameAnimal {
+	text-align: center;
+}
+
+.details {
+    background: #ececec;
+    padding: 5px 25px;
+    border-radius: 3px;
+}
+
+.card-title {
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 40px;
+	padding: 20px;
+	background: #f9f9f9;
+}
+
+	</style>
+
+</head>
+<body>
+	<h2 class="card-title"> ES6 - Aula 4 </h2>
+
+	<div class="col-md-12">
+		<p id="demo" class="col-md-3"></p>
+	</div>
+
+<script>
+
+const cheetah = {
+    name: 'Cheetah',
+    scientificName: 'Acinonyx jubatus',
+    lifespan: '10-12 years',
+    speed: '68-75 mph',
+    diet: 'carnivore',
+    summary: 'Fastest mammal on land, the cheetah can reach speeds of 60 or perhaps even 70 miles (97 or 113 kilometers) an hour over short distances. It usually chases its prey at only about half that speed, however. After a chase, a cheetah needs half an hour to catch its breath before it can eat.',
+    fact: 'Cheetahs have “tear marks” that run from the inside corners of their eyes down to the outside edges of their mouth.'
+};
+
+// creates an animal trading card
+function createAnimalTradingCardHTML(animal) {
+    
+    const cardHTML =
+
+    `<div class="card col-md-12">
+        <h1 class="nameAnimal display-4"> ${animal.name}</h1>
+        
+        <div class="card imgAnimal" >
+        	<img class='card-img-top' src="img/${animal.name}.jpeg" alt="${animal.name}" width="" <class="picture">
+        </div>
+        
+        <div class="description">
+            <p class="card-text"> ${animal.fact}</p>
+            <ul class="card-text details">
+                <li><span class="bold">Scientific Name</span>: ${animal.scientificName} </li>
+                <li><span class="bold">Average Lifespan</span>: ${animal.lifespan} </li>
+                <li><span class="bold">Average Speed</span>: ${animal.speed} </li>
+                <li><span class="bold">Diet</span>: ${animal.diet} </li>
+            </ul>
+            <p class="brief"> ${animal.summary} </p>
+        </div>
+
+    </div>`
+    ;
+
+    return cardHTML;
+}
+
+document.getElementById("demo").innerHTML = createAnimalTradingCardHTML(cheetah);
+
+console.log(createAnimalTradingCardHTML(cheetah));
+
+</script>
+
+</body>
+</html>
