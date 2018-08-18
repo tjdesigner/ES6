@@ -22,8 +22,8 @@
 		}
 
 		p#demo {
-		    margin: 0 auto;
-		    width: 1024px;
+		margin: 0 auto;
+		max-width: 1024px;
 	    background: rgba(0,0,0,0.1);
 	    padding: 20px;
 	    border-radius: 3px;
@@ -86,7 +86,7 @@ function createAnimalTradingCardHTML(animal) {
     
     const cardHTML =
 
-    `<div class="card col-md-12">
+    `<div class="card col-md-4">
         <h1 class="nameAnimal display-4"> ${animal.name}</h1>
         
         <div class="card imgAnimal" >

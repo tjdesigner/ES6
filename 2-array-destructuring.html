@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Array Destructuring </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<style>
+
+		body{
+			background: #4a96c3;
+		}
+
+		h1.asdf {
+	    color: #999999;
+	    margin: auto;
+	    width: 1024px;
+	    text-align: center;
+	    padding: 20px;
+	    border: solid 1px #ececec;
+	    background: #f9f9f9;
+		}
+
+		p#demo {
+		margin: 0 auto;
+		max-width: 1024px;
+	    background: rgba(0,0,0,0.1);
+	    padding: 20px;
+	    border-radius: 3px;
+	    border: solid 1px rgba(0,0,0,0.1);
+		}
+
+		.imgAnimal {
+		    border-radius: 4px;
+		    padding: 9px 9px 5px 9px;
+		    display: inline-block;
+		}
+
+		.description {
+		    padding: 10px;
+		}
+
+		.nameAnimal {
+			text-align: center;
+		}
+
+		.details {
+		    background: #ececec;
+		    padding: 5px 25px;
+		    border-radius: 3px;
+		}
+
+		.card-title {
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: 40px;
+			padding: 20px;
+			background: #f9f9f9;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+	<h2 class="card-title"> 2 - Array destructuring </h2>
+
+	<div class="col-md-12">
+		<p id="demo" class="col-md-3"></p>
+	</div>
+
+<script>
+
+
+	/*
+ * Programming Quiz: Destructuring Arrays (1-3)
+ *
+ * Use destructuring to initialize the variables `one`, `two`, and `three`
+ * with the colors from the `things` array.
+ */
+ 
+ /*
+ * Programming Quiz: Destructuring Arrays (1-3)
+ *
+ * Use destructuring to initialize the variables `one`, `two`, and `three`
+ * with the colors from the `things` array.
+ */
+ 
+ /* Método antes do ES6 
+const things = ['red', 'basketball', 'paperclip', 'green', 'computer', 'earth', 'udacity', 'blue', 'dogs'];
+
+const one = things;
+const two = '';
+const three = '';
+
+const colors = `List of Colors
+1. ${one}
+2. ${two}
+3. ${three}`;
+
+console.log(colors);
+ */
+
+
+const things = [/*one*/'red', /*two*/'basketball', /*three*/'paperclip', /*four*/'green', /*five*/'computer', /*six*/'earth', /*seven*/'udacity', /*eight*/'blue', /*nine*/'dogs'];
+
+/* Novo método - Cada espaço vazio (palavras comentadas) entre vírgulas representa a posição de uma array respectivamente. */
+const [one, /*basketball*/, /*paperclip*/, two, /*computer*/, /*earth*/, /*udacity*/, three, /*dogs*/] = things;
+
+const colors = `
+<div class="content">
+<h1 class="display-4">List of Colors</h1>
+	<ul class="list-group">
+		<li class="list-group-item list-group-item-action"> 1. ${one} </li>
+		<li class="list-group-item list-group-item-action"> 2. ${two} </li>
+		<li class="list-group-item list-group-item-action"> 3. ${three} </li>
+	</ul>
+</div>
+`;
+
+document.getElementById("demo").innerHTML = colors;
+console.log(colors);
+
+</script>
+
+</body>
+</html>
